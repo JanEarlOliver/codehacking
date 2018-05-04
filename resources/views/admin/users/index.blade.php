@@ -1,5 +1,9 @@
 @extends('layouts.admin')
 @section('content')
+
+@if(Session::has('deleted_user'))
+  <p class="form-group bg-danger">{{Session('deleted_user')}}
+@endif
 <h1>Users</h1>
 
 <table class="table table-bordered">
